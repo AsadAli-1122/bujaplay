@@ -8,13 +8,13 @@
     <style>
         
 body{
-    background-color: black;
+    background-color: rgb(151, 63, 63);
     color: white;
 }
 .shift{
-    font-family: -apple-system, BlinkMacSystemFont, Roboto, Arial, Helvetica, sans-serif;
+        font-family: Open Sans,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,sans-serif;
     letter-spacing: 2px;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: white;
     margin-bottom: 0;
     display: flex;
@@ -26,7 +26,7 @@ body{
     bottom: 0;
     padding-top: 30px;
     padding-bottom: 20px;
-    border-radius: 40px 40px 0 0;
+    border-radius: 0;
     visibility: hidden;
 }
 .shift-open{
@@ -38,21 +38,25 @@ body{
     }
 }
 .shift>h2{
-    text-transform: capitalize;
+    font-size: x-large;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 20px;
 }
 .shift>p{
     width: 80%;
+    line-height: normal;
     color: gray;
     font-size: small;
 }
 .shift button{
-    font-family: -apple-system, BlinkMacSystemFont, Roboto, Arial, Helvetica, sans-serif;
+        font-family: Open Sans,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,sans-serif;
     margin-top: 5px;
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 10px 20px 7px 20px;
+    border-radius: 30px;
     font-size: medium;
     font-weight: bold;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     /* cursor: pointer; */
 }
 .shift>.switch-app{
@@ -139,7 +143,8 @@ function closePopup(){
 let shiftbox = document.getElementById("ShiftBox");
 setInterval(
     function openShift(){
-        shiftbox.classList.add("shift-open")},10000 
+        shiftbox.classList.add("shift-open")},
+        10000 
 )
 // or funtion k bad ye lga dy openShift();
 openShift();
