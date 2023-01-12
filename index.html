@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        
+body{
+    background-color: black;
+    color: white;
+}
+.shift{
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    background-color: black;
+    color: white;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 40px 40px 0 0;
+    visibility: hidden;
+}
+.shift-open{
+    visibility: visible;
+}
+@media (min-width:550px){
+    .shift{
+        display: none;
+    }
+}
+.shift>h2{
+    text-transform: capitalize;
+}
+.shift>p{
+    width: 80%;
+    color: gray;
+    font-size: small;
+}
+.shift button{
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: medium;
+    font-weight: bold;
+    letter-spacing: 1px;
+    /* cursor: pointer; */
+}
+.shift>.switch-app{
+    background-color: #FE4000;
+    color: white;
+    border: 2px solid #FE4000;
+}
+.shift>.switch-app:hover{
+    background-color: #c93200;
+    color: white;
+}
+.shift .not-now{
+    color: #FE4000;
+    background-color: transparent;
+    border: 2px solid transparent;
+}
+.shift .not-now:hover{
+    color: white;
+    background-color: #c93200;
+    border: 2px solid #FE4000;
+}
+.pop-up{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 300px;
+    padding-top: 40px;
+    width: 400px;
+    background-color: white;
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    border-radius: 5px;
+    visibility: hidden;
+    transition: trasnform 1s, top 1s;
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+}
+    </style>
+    <title>Document</title>
+</head>
+
+
+
+<!-- body my sy ye cut kr dy  onscroll="openShift()" -->
+<!-- baki font-family ko replace krdy .shift my .shift button my -->
+
+
+
+<body>
+    
+    <div class="alert show shift" id="ShiftBox"> 
+        <h2>it's better in the app</h2>
+        <p>Stream and offline millions of songs and albums free from the top artists and curators.</p>
+        <button type="submit" class="switch-app" onclick="openPopup()">Switch to the App</button>
+        <button type="button" class="not-now" data-dismiss="alert" aria-label="Close">Not Now</button>
+        <div>
+            <div class="pop-up" id="popup">
+                <a href=""><img src="images/apple-store.png" alt="apple-store" width="120px"></a>
+                <a href=""><img src="images/play-store.png" alt="play-store" width="120px"></a>
+                <button class="not-now" type="button" onclick="closePopup()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+<p>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla odio illo nemo! Quo temporibus corporis dolor omnis aliquam! Reiciendis voluptate ad repudiandae molestias, nemo unde et maiores quis illo labore voluptatem totam ratione nostrum id ducimus reprehenderit iste perferendis pariatur enim eveniet quasi perspiciatis dignissimos. Tempore enim placeat natus ipsam magni repudiandae tenetur dolorem quia, aperiam dolores sunt odit, delectus unde quam, deleniti est excepturi pariatur blanditiis? Aperiam excepturi architecto fugit. Saepe assumenda quisquam rerum ea. Dolor consequatur, ea rem eum dolorum quasi atque facere totam. Dolorum, obcaecati, magni similique repudiandae totam neque expedita facilis earum, quidem animi omnis delectus iste aspernatur quo debitis atque libero corrupti blanditiis. Animi ad facilis suscipit rerum, quasi, perspiciatis aperiam pariatur tempore quae blanditiis dignissimos itaque ipsam numquam laboriosam! Id adipisci porro quos quisquam voluptas enim est quam accusamus repellat a natus fugiat ipsa aliquid eum, minus deserunt maxime corrupti debitis incidunt sint, quas ex vitae. Iste quas vel nesciunt esse ipsam eaque, officiis, voluptates consequuntur, at mollitia animi? Et perferendis necessitatibus commodi? Nemo ea dolor fugit incidunt distinctio fugiat laborum, autem, pariatur exercitationem doloribus recusandae quos? Nulla, ullam sequi. Ipsam error quae reprehenderit voluptatibus saepe dolore aliquid pariatur, molestiae nostrum aperiam vel at delectus, optio autem inventore quod doloribus enim commodi rem officiis explicabo deserunt eius assumenda vitae? Fugit nostrum saepe, autem vero quasi voluptas iure inventore exercitationem in perferendis ipsam id harum fuga ad culpa aspernatur, facilis consequatur veniam pariatur quod. Repudiandae ut sunt esse reiciendis quasi et, accusantium ipsa corporis quos commodi consequuntur architecto error tenetur fugit debitis accusamus ad ab. Soluta earum ipsa, quas ex porro omnis similique doloremque veritatis provident, dolores est, animi ut nam mollitia assumenda accusamus. Dolore molestias eos voluptas amet, corrupti quos voluptate. Fugit quaerat consequatur et ratione pariatur expedita delectus, tempore eaque rerum sapiente, similique ex eius at numquam excepturi nemo praesentium voluptatibus ipsum blanditiis. Vitae, officia! Facere accusamus obcaecati aut suscipit totam dolorum inventore eius iusto minima. Fugit, temporibus? Ullam obcaecati temporibus neque pariatur aliquid iste dolore eaque laborum accusantium alias illo, accusamus consequuntur reprehenderit dolores commodi numquam deleniti tenetur! Ullam sequi, odio obcaecati expedita modi aspernatur praesentium et commodi ipsum, tempore adipisci beatae ab porro accusamus error nam iusto libero, sapiente hic. Ad corporis placeat omnis nemo amet soluta cumque sit delectus voluptates facere itaque aut nesciunt ut modi quidem at quae deleniti quas, eaque quos aliquam molestiae. Eius, praesentium, accusantium culpa aliquid ipsam incidunt eos quis nisi quidem ducimus sunt odit minus ex harum laborum fuga doloribus commodi in tempora hic nihil iure? Eligendi laborum quod nesciunt. Sed, veritatis adipisci. Et, consequatur atque quia aspernatur autem nostrum illum quaerat perspiciatis eaque, blanditiis rerum. Ipsum, repellendus unde nam animi earum ab maiores, fugiat sequi dignissimos repellat, corrupti necessitatibus inventore esse eaque minima id consequatur commodi. Laborum, aliquam? Nihil voluptatum ad quibusdam dolorem consequuntur, tenetur impedit blanditiis quaerat quos ea cumque eius, cum ipsa. Harum ipsam natus impedit nobis. Veniam quis impedit, odio sint accusamus, consequatur architecto necessitatibus et deserunt in nulla maxime veritatis. In aliquid perspiciatis non dicta, placeat asperiores consequatur error aliquam repudiandae quisquam labore reprehenderit hic assumenda quos dolorum nam obcaecati aut quasi rem recusandae debitis corporis neque ut! Delectus dolores ad ratione eos ipsum nostrum, ex minima deserunt facilis reiciendis expedita vel nemo earum necessitatibus dignissimos, quas esse, laudantium ipsa quam animi commodi repellat. Ducimus, fuga quos. Eligendi recusandae pariatur, perferendis corrupti sunt veniam magnam totam architecto vitae aliquid molestiae mollitia nulla laboriosam, eius accusantium, vel dolorem dolores placeat beatae. Distinctio facilis earum possimus nam dolore architecto dolores sint alias impedit. Et veniam, ratione praesentium accusantium molestias tempore quibusdam soluta corporis natus deserunt error asperiores qui tempora culpa incidunt provident vitae dolores itaque. Alias natus iure, facilis, vero maiores eum deleniti mollitia rerum earum, est nulla neque iste. Veritatis iste ut quis ipsum, doloremque deserunt, dolore eveniet ducimus at nam natus explicabo quia modi et aliquam, debitis reiciendis officia quod praesentium? Hic dolore ipsam itaque cum provident magnam reprehenderit accusantium iste aut quae quaerat excepturi odio consectetur quia odit magni, doloribus omnis corporis iure tenetur quibusdam ut autem aliquid. Fuga tempore, deserunt, aut asperiores molestias optio modi fugit recusandae debitis est ipsam harum. Mollitia neque excepturi tempore, animi quae non, illo odit ea nesciunt expedita est quas. Voluptatem recusandae, doloribus sed rem libero adipisci necessitatibus consequatur eum harum molestias aperiam reprehenderit doloremque explicabo expedita nesciunt sint velit fugit similique ipsum impedit, quas animi odit? Perferendis nam rerum, sunt asperiores error incidunt eum porro adipisci neque minus modi placeat, officia quasi quia! Cum, quaerat. Quos reprehenderit alias dolor voluptatem consequatur. Voluptate totam reiciendis, fugiat accusantium nesciunt ipsum corporis eos, maxime perferendis inventore dolores ut necessitatibus quo suscipit placeat velit! Voluptatem commodi autem modi voluptatibus officia, ipsam atque fugit repellat doloremque fuga provident, earum nemo porro asperiores. Numquam nihil blanditiis placeat atque aliquam libero. Quibusdam eveniet ullam debitis repellat eum. Neque illo eius aspernatur eveniet adipisci, est dolor sit culpa deserunt libero ab aliquam unde odio quidem at soluta optio aut doloremque. Dicta, ducimus laudantium? Accusamus, soluta mollitia architecto officia exercitationem adipisci numquam quidem, expedita velit quia deserunt obcaecati culpa provident animi tenetur id nihil. Vitae est soluta voluptatum temporibus assumenda esse ad labore, quaerat fugit doloribus fuga, suscipit libero quis sunt nam deleniti. Dolore velit nulla eum unde? Repellendus vero illo quaerat itaque architecto cum maxime voluptatibus debitis voluptatem quidem impedit, quisquam ipsam quae, soluta laboriosam nesciunt eligendi fuga neque velit libero, repellat dolorem facere molestias qui. Placeat amet soluta dolores! Cupiditate totam, in sapiente reprehenderit labore nostrum molestiae, iusto ea hic cumque enim? Omnis, mollitia, eos enim ipsam aliquid quaerat, deserunt saepe doloremque provident exercitationem distinctio incidunt iure nostrum dignissimos? Voluptate dicta ducimus nobis illum officiis id dolore fuga. Tenetur neque eum officia nesciunt accusamus dolorem, sint, quisquam a, quidem amet tempore vel numquam sunt saepe et. Aperiam consequatur perspiciatis excepturi eveniet. Magni in nisi eveniet quas dolorum culpa voluptas fugit iste velit vel eius odio suscipit aliquid labore blanditiis sit ab, cum possimus, libero sunt. Amet alias eum aperiam.
+</p>
+
+
+    <script>
+let popup = document.getElementById("popup");
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
+let shiftbox = document.getElementById("ShiftBox");
+setInterval(
+    function openShift(){
+        shiftbox.classList.add("shift-open")},10000 
+)
+// or funtion k bad ye lga dy openShift();
+openShift();
+
+    </script>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
